@@ -15,7 +15,7 @@ const links = [
     { source: 'A', target: 'B', value: 1 },
     { source: 'A', target: 'C', value: 1 },
     { source: 'B', target: 'D', value: 1 },
-    { source: 'C', target: 'D', value: 1 }
+    { source: 'C', target: 'D', value: 20 }
 ];
 
 
@@ -26,6 +26,7 @@ function App() {
     <>
           <h1>Graph Hopper</h1>
           <NetworkGraph nodes={nodes} links={links} />
+          <h4>Graph Hopper is a plugin</h4>
     </>
   )
 }

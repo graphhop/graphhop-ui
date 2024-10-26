@@ -7,12 +7,12 @@
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\App.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\14151\\source\\repos\\graphhop-ui\\src\\NetworkGraph.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\NetworkGraph.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\14151\\source\\repos\\graphhop-ui\\src\\App.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\App.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\14151\\source\\repos\\graphhop-ui\\src\\NetworkGraph.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\NetworkGraph.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,7 +22,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 301,
-          "SelectedChildIndex": 23,
+          "SelectedChildIndex": 22,
           "Children": [
             {
               "$type": "Bookmark",
@@ -110,28 +110,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "App.css",
               "DocumentMoniker": "C:\\Users\\14151\\source\\repos\\graphhop-ui\\src\\App.css",
               "RelativeDocumentMoniker": "src\\App.css",
               "ToolTip": "C:\\Users\\14151\\source\\repos\\graphhop-ui\\src\\App.css",
               "RelativeToolTip": "src\\App.css",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAbAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAHAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
               "WhenOpened": "2024-10-26T17:37:06.655Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "NetworkGraph.jsx",
-              "DocumentMoniker": "C:\\Users\\14151\\source\\repos\\graphhop-ui\\src\\NetworkGraph.jsx",
-              "RelativeDocumentMoniker": "src\\NetworkGraph.jsx",
-              "ToolTip": "C:\\Users\\14151\\source\\repos\\graphhop-ui\\src\\NetworkGraph.jsx",
-              "RelativeToolTip": "src\\NetworkGraph.jsx",
-              "ViewState": "AQIAAEEAAAAAAAAAAAAgwAoAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
-              "WhenOpened": "2024-10-26T17:34:28.304Z",
               "EditorCaption": ""
             },
             {
@@ -142,9 +129,22 @@
               "RelativeDocumentMoniker": "src\\App.jsx",
               "ToolTip": "C:\\Users\\14151\\source\\repos\\graphhop-ui\\src\\App.jsx",
               "RelativeToolTip": "src\\App.jsx",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAABwAAAAAAAAA",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAABwAAAAmAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
               "WhenOpened": "2024-10-26T16:21:01.651Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "NetworkGraph.jsx",
+              "DocumentMoniker": "C:\\Users\\14151\\source\\repos\\graphhop-ui\\src\\NetworkGraph.jsx",
+              "RelativeDocumentMoniker": "src\\NetworkGraph.jsx",
+              "ToolTip": "C:\\Users\\14151\\source\\repos\\graphhop-ui\\src\\NetworkGraph.jsx",
+              "RelativeToolTip": "src\\NetworkGraph.jsx",
+              "ViewState": "AQIAADEAAAAAAAAAAADwvzUAAAAtAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
+              "WhenOpened": "2024-10-26T17:34:28.304Z",
               "EditorCaption": ""
             },
             {
