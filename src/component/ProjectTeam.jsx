@@ -16,7 +16,7 @@ const ProjectTeam = () => {
                         Colin Matthews <br />
                         Cullen Sarles <br />
                         Justin Jao <br />
-                        K Chiu <br />
+                        Ka Kit Chiu <br />
                         Karen Kuo <br />
                         Konrad Zaremba <br />
                         Nicholas Martino <br />
