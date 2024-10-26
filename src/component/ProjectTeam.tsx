@@ -6,7 +6,7 @@ const ProjectTeam = () => {
     return (
         <Container>
             <Row>
-                <Col sm={6}></Col>
+                <Col sm={3}></Col>
                 <Col sm={6}>
                     <hr />
                     <h4 className="subtitle nova-mono-regular">Project Team</h4>
