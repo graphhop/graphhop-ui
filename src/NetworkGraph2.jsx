@@ -1,4 +1,4 @@
-import React, { useState, useCallback } from "react";
+import React, { useState, useCallback, useEffect } from "react";
 import ForceGraph3D from "react-force-graph-3d";
 import ForceGraph2D from "react-force-graph-2d";
 import { getLinkColor, RED, GREEN, GRAY, YELLOW } from "./Types";
@@ -8,6 +8,13 @@ import "./App.css";
 const NetworkGraph2 = ({ nodes, links, is3D }) => {
     const [tooltipContent, setTooltipContent] = useState(null);
     const [tooltipPosition, setTooltipPosition] = useState({ x: 0, y: 0 });
+    const [width, setWidth] = useState(window.outerWidth * 0.66);
+
+    useEffect(() => {
+        const handleResize = () => setWidth(window.innerWidth * 0.66);
+        window.addEventListener("resize", handleResize);
+        return () => window.removeEventListener("resize", handleResize);
+    }, []);
 
     const graphData = { nodes, links };
 
@@ -92,7 +99,7 @@ const NetworkGraph2 = ({ nodes, links, is3D }) => {
                     linkLabel={(link) => `Value: ${link.value}`}
                     linkColor={(link) => getLinkColor(link.source, link.target)}
                     backgroundColor="rgba(0,0,0,0.2)"
-                    width={window.innerWidth * 0.66}
+                    width={width}
                     onNodeHover={handleNodeHover}
                     onNodeClick={handleNodeClick}
                 />
@@ -104,6 +111,8 @@ const NetworkGraph2 = ({ nodes, links, is3D }) => {
                     linkDirectionalParticleSpeed={(d) => d.value * 0.001}
                     nodeLabel={(node) => `${node.id}: ${node.group}`}
                     linkLabel={(link) => `Value: ${link.value}`}
+                    width={width}
+                    onNodeHover={handleNodeHover}
                 />
             )}
         </div>
