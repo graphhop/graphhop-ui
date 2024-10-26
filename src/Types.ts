@@ -4,6 +4,7 @@ export interface ComponentNode {
   added: boolean;
   deleted: boolean;
   changed: boolean;
+  image: string;
 }
 
 export interface ComponentLink {

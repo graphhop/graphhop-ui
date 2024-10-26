@@ -10,10 +10,38 @@ const idC = Guid.create().toString();
 const idD = Guid.create().toString();
 
 const nodes = [
-  { id: idA, name: "A", added: false, deleted: false, changed: false },
-  { id: idB, name: "B", added: true, deleted: false, changed: false },
-  { id: idC, name: "C", added: false, deleted: true, changed: false },
-  { id: idD, name: "D", added: false, deleted: false, changed: true },
+  {
+    id: idA,
+    name: "Line",
+    added: false,
+    deleted: false,
+    changed: false,
+    image: "",
+  },
+  {
+    id: idB,
+    name: "Point3D",
+    added: true,
+    deleted: false,
+    changed: false,
+    image: "",
+  },
+  {
+    id: idC,
+    name: "Point3D",
+    added: false,
+    deleted: true,
+    changed: false,
+    image: "",
+  },
+  {
+    id: idD,
+    name: "Point3D",
+    added: false,
+    deleted: false,
+    changed: true,
+    image: "",
+  },
 ] as ComponentNode[];
 
 const links = [
