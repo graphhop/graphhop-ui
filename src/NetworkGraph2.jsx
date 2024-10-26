@@ -15,6 +15,9 @@ const NetworkGraph2 = ({ nodes, links, is3D }) => {
           linkDirectionalParticleSpeed={(d) => d.value * 0.001}
           nodeLabel={(node) => `${node.name}: ${node.group}`}
           linkLabel={(link) => `Value: ${link.value}`}
+          nodeColor={(node) =>
+            node.added ? "red" : node.deleted ? "green" : "gray"
+          }
         />
       ) : (
         <ForceGraph2D
@@ -24,6 +27,7 @@ const NetworkGraph2 = ({ nodes, links, is3D }) => {
           linkDirectionalParticleSpeed={(d) => d.value * 0.001}
           nodeLabel={(node) => `${node.id}: ${node.group}`}
           linkLabel={(link) => `Value: ${link.value}`}
+          linkColor={getLinkColor}
         />
       )}
     </div>
