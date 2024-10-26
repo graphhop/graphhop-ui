@@ -1,7 +1,8 @@
-import { Guid } from "guid-typescript";
-import "./App.css";
-import NetworkGraph from "./NetworkGraph";
-import { ComponentNode, Link } from "./Types";
+import { useState } from 'react';
+import './App.css';
+import NetworkGraph from './NetworkGraph';
+import NetworkGraph2 from './NetworkGraph2';
+import myData from './assets/dataset/Sample.json';
 
 const idA = Guid.create().toString();
 const idB = Guid.create().toString();
@@ -25,9 +26,10 @@ const links = [
 function App() {
   return (
     <>
-      <h1>Graph Hopper</h1>
-      <NetworkGraph nodes={nodes} links={links} />
-      <h4>Graph Hopper is a plugin</h4>
+          <h1>Graph Hopper</h1>
+          <NetworkGraph nodes={nodes} links={links} />
+          <NetworkGraph2 nodes={myData.nodes} links={myData.links} is3D={true} />
+          <h4>Graph Hopper is a plugin</h4>
     </>
   );
 }
