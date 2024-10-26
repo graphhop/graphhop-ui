@@ -9,7 +9,7 @@ const idD = Guid.create().toString();
 export const nodes = [
   {
     id: idA,
-    name: "Line",
+    name: "Gradient",
     category: "Geometry",
     description:"This is a line. This is a line.",
     added: false,
@@ -19,7 +19,7 @@ export const nodes = [
   },
   {
     id: idB,
-    name: "Point3D",
+    name: "Read File",
     added: true,
     deleted: false,
     changed: false,
@@ -27,7 +27,7 @@ export const nodes = [
   },
   {
     id: idC,
-    name: "Point3D",
+    name: "Data Dam",
     added: false,
     deleted: true,
     changed: false,
@@ -35,7 +35,7 @@ export const nodes = [
   },
   {
     id: idD,
-    name: "Point3D",
+    name: "Mesh Point",
     added: false,
     deleted: false,
     changed: true,

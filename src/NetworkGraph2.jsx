@@ -38,8 +38,22 @@ const NetworkGraph2 = ({ nodes, links, is3D }) => {
             group.add(sprite);
         }
 
+        node.link = `https://grasshopperdocs.com/components/grasshopperparams/${formatNodeName(node.name)}.html`;
+
         return group;
     }, []);
+
+    const formatNodeName = (name) => {
+        return name
+            .split(' ')
+            .map((word, index) => {
+                if (index === 0) {
+                    return word.charAt(0).toLowerCase() + word.slice(1);
+                }
+                return word.charAt(0).toUpperCase() + word.slice(1);
+            })
+            .join('');
+    };
 
     const getNodeLabel = (node) => `
     <div>
@@ -47,7 +61,7 @@ const NetworkGraph2 = ({ nodes, links, is3D }) => {
       <div><strong>Category:</strong> ${node.category}</div>
       <div><strong>Description:</strong> ${node.description}</div>
     </div>
-  `;
+`;
 
     const handleNodeHover = useCallback((node) => {
         document.body.style.cursor = node ? "pointer" : "default";
@@ -55,6 +69,12 @@ const NetworkGraph2 = ({ nodes, links, is3D }) => {
         elements.forEach((element) => {
             element.style.visibility = node ? "visible" : "none";
         });
+    }, []);
+
+    const handleNodeClick = useCallback((node) => {
+        if (node.link) {
+            window.open(node.link, '_blank');
+        }
     }, []);
 
     return (
@@ -74,6 +94,7 @@ const NetworkGraph2 = ({ nodes, links, is3D }) => {
                     backgroundColor="rgba(0,0,0,0.2)"
                     width={window.innerWidth * 0.66}
                     onNodeHover={handleNodeHover}
+                    onNodeClick={handleNodeClick}
                 />
             ) : (
                 <ForceGraph2D
