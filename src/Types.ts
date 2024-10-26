@@ -1,8 +1,9 @@
 export interface ComponentNode {
   id: string;
-  Name: string;
-  Added: boolean;
-  Deleted: boolean;
+  name: string;
+  added: boolean;
+  deleted: boolean;
+  changed: boolean;
 }
 
 export interface Link {
