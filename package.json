@@ -12,14 +12,17 @@
   "dependencies": {
     "@types/d3": "^7.4.3",
     "@types/gremlin": "^3.6.7",
+    "bootstrap": "^5.3.3",
     "d3": "^7.9.0",
     "gremlin": "^3.7.2",
     "guid-typescript": "^1.0.9",
     "react": "^18.3.1",
+    "react-bootstrap": "^2.10.5",
     "react-dom": "^18.3.1",
     "react-force-graph": "^1.44.6",
     "react-force-graph-2d": "^1.25.7",
-    "react-force-graph-3d": "^1.24.5"
+    "react-force-graph-3d": "^1.24.5",
+    "react-router-dom": "^6.27.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.13.0",
