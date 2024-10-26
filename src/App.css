@@ -42,6 +42,10 @@
   padding-right: 5rem;
 }
 
+.primary-txt-lg {
+    font-size: var(--primary-txt-lg);
+}
+
 .primary-txt {
   font-size: var(--primary-txt);
   color: color(--primary-dark);
@@ -53,3 +57,21 @@ hr {
   height: 2px;
   color: var(--primary-dark);
 }
+
+
+/*#region tooltip*/
+.scene-tooltip {
+    background-color: rgba(255,255,255, 0.1) !important;
+    color: white !important;
+    /*padding: 15px !important;*/
+    /*border-radius: 2px !important;*/
+    font-size: 14px !important;
+    pointer-events: none !important;
+    z-index: 1000 !important;
+    font-family: "IBM Plex Sans", sans-serif;
+    font-style: normal;
+    font-size: var(--primary-subtxt);
+    max-width: 200px;
+    word-wrap: break-word;
+}
+/*#endregion */

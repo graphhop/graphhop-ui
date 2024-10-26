@@ -10,6 +10,8 @@ export const nodes = [
   {
     id: idA,
     name: "Line",
+    category: "Geometry",
+    description:"This is a line. This is a line.",
     added: false,
     deleted: false,
     changed: false,
