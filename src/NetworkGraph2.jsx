@@ -3,12 +3,11 @@ import ForceGraph3D from "react-force-graph-3d";
 import ForceGraph2D from "react-force-graph-2d";
 import { getLinkColor, RED, GREEN, GRAY, YELLOW } from "./Types";
 import * as THREE from "three";
-import "./App.css"
+import "./App.css";
 
 const NetworkGraph2 = ({ nodes, links, is3D }) => {
     const [tooltipContent, setTooltipContent] = useState(null);
     const [tooltipPosition, setTooltipPosition] = useState({ x: 0, y: 0 });
-
 
     const graphData = { nodes, links };
 
@@ -51,10 +50,10 @@ const NetworkGraph2 = ({ nodes, links, is3D }) => {
   `;
 
     const handleNodeHover = useCallback((node) => {
-        document.body.style.cursor = node ? 'pointer' : 'default';
-        const elements = document.querySelectorAll('.scene-tooltip');
-        elements.forEach(element => {
-            element.style.visibility = node ? 'visible' : 'none';
+        document.body.style.cursor = node ? "pointer" : "default";
+        const elements = document.querySelectorAll(".scene-tooltip");
+        elements.forEach((element) => {
+            element.style.visibility = node ? "visible" : "none";
         });
     }, []);
 
@@ -73,7 +72,7 @@ const NetworkGraph2 = ({ nodes, links, is3D }) => {
                     linkLabel={(link) => `Value: ${link.value}`}
                     linkColor={(link) => getLinkColor(link.source, link.target)}
                     backgroundColor="rgba(0,0,0,0.2)"
-                    width={window.innerWidth * 0.5}
+                    width={window.innerWidth * 0.66}
                     onNodeHover={handleNodeHover}
                 />
             ) : (
