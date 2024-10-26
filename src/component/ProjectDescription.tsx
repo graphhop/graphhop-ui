@@ -2,7 +2,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { Col, Container, Row } from "react-bootstrap";
 import "../Fonts.css";
 
-const ProjectTeam = () => {
+const ProjectDescription = () => {
     return (
         <Container>
             <Row>
@@ -28,4 +28,4 @@ const ProjectTeam = () => {
     );
 };
 
-export default ProjectTeam;
+export default ProjectDescription;

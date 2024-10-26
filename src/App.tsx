@@ -4,10 +4,8 @@ import "./App.css";
 import "./Fonts.css";
 import NetworkGraph2 from "./NetworkGraph2";
 
-import {
-    default as ProjectDescription,
-    default as ProjectTeam,
-} from "./component/ProjectDescription";
+import ProjectDescription from "./component/ProjectDescription";
+import ProjectTeam from "./component/ProjectTeam";
 import { links, nodes } from "./data/graphMock";
 
 function App() {
