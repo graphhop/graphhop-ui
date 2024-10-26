@@ -6,6 +6,7 @@ const ProjectDescription = () => {
     return (
         <Container>
             <Row>
+                <Col sm={6}></Col>
                 <Col sm={6}>
                     <hr />
                     <h4 className="subtitle nova-mono-regular">Description</h4>
@@ -22,7 +23,6 @@ const ProjectDescription = () => {
                         creative process through improved project tracking and collaboration.
                     </h4>
                 </Col>
-                <Col sm={3}></Col>
             </Row>
         </Container>
     );

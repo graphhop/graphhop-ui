@@ -58,7 +58,7 @@ function App() {
 
             {/* Section 2 */}
             <section id="network-graph" style={{ paddingTop: "3rem" }}>
-                <NetworkView definition={definition} />
+                <NetworkView definitions={documents} definitionIndex={0} />
             </section>
 
             {/* Section 3 */}
