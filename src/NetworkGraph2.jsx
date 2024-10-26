@@ -44,7 +44,7 @@ const NetworkGraph2 = ({ nodes, links, is3D }) => {
   }, []);
 
   return (
-    <div style={{ width: "100%", height: "100vh" }}>
+    <div style={{ height: "100vh" }}>
       {is3D ? (
         <ForceGraph3D
           graphData={graphData}
@@ -57,6 +57,7 @@ const NetworkGraph2 = ({ nodes, links, is3D }) => {
           linkLabel={(link) => `Value: ${link.value}`}
           linkColor={(link) => getLinkColor(link.source, link.target)}
           backgroundColor="rgba(0,0,0,0.2)"
+          width={`${window.innerWidth * 0.5}px`}
         />
       ) : (
         <ForceGraph2D
