@@ -64,7 +64,8 @@ function App() {
             <Navbar expand="lg" className="bg-body-tertiary">
                 <Container>
                 <Col sm={6}>
-                    <Navbar.Brand className="nova-mono-regular" href="#home">GraphHopper</Navbar.Brand>
+                        <Navbar.Brand className="nova-mono-regular" href="#home">
+                            GraphHopper</Navbar.Brand>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 </Col>
                 <Col sm={6}>
