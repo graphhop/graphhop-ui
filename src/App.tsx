@@ -2,7 +2,6 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { Col, Container, Nav, Navbar } from "react-bootstrap";
 import "./App.css";
 import "./Fonts.css";
-import NetworkGraph from "./NetworkGraph";
 import NetworkGraph2 from "./NetworkGraph2";
 
 import ProjectDescription from "./component/ProjectDescription";
@@ -48,7 +47,6 @@ function App() {
 
       {/* Section 2 */}
       <section id="network-graph" style={{ paddingTop: "3rem" }}>
-        <NetworkGraph className="centered" nodes={nodes} links={links} />
         <NetworkGraph2 nodes={nodes} links={links} is3D={true} />
       </section>
 
