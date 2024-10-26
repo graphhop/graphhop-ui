@@ -9,10 +9,10 @@ const idC = Guid.create().toString();
 const idD = Guid.create().toString();
 
 const nodes = [
-  { id: idA, name: "A" },
-  { id: idB, name: "B" },
-  { id: idC, name: "C" },
-  { id: idD, name: "D" },
+  { id: idA, name: "A", added: false, deleted: false, changed: false },
+  { id: idB, name: "B", added: true, deleted: false, changed: false },
+  { id: idC, name: "C", added: false, deleted: true, changed: false },
+  { id: idD, name: "D", added: false, deleted: false, changed: true },
 ] as ComponentNode[];
 
 const links = [
