@@ -1,15 +1,17 @@
-import "bootstrap/dist/css/bootstrap.min.css";
-import { Col, Container, Nav, Navbar } from "react-bootstrap";
-import "./App.css";
-import "./Fonts.css";
-import NetworkGraph2 from "./NetworkGraph2";
-
 import { useState } from "react";
+import { Col, Container, Nav, Navbar } from "react-bootstrap";
+
 import ProjectDescription from "./component/ProjectDescription";
 import ProjectTeam from "./component/ProjectTeam";
 import { documents } from "./data/graphMock";
 import { retrieveDocuments } from "./gremlin/gremlinRetriever";
 import { GhDefinition } from "./Types";
+
+import "bootstrap/dist/css/bootstrap.min.css";
+import "react-widgets/styles.css";
+import "./App.css";
+import { NetworkView } from "./component/Network";
+import "./Fonts.css";
 
 const graph = await retrieveDocuments();
 console.log("graph", graph);
@@ -55,7 +57,7 @@ function App() {
 
             {/* Section 2 */}
             <section id="network-graph" style={{ paddingTop: "3rem" }}>
-                <NetworkGraph2 nodes={definition.nodes} links={definition.links} is3D={true} />
+                <NetworkView definition={definition} />
             </section>
 
             {/* Section 3 */}
