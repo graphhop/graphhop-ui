@@ -3,6 +3,8 @@ import { Col, Container, Nav, Navbar } from "react-bootstrap";
 
 import ProjectDescription from "./component/ProjectDescription";
 import ProjectTeam from "./component/ProjectTeam";
+
+import { NetworkView } from "./component/Network";
 import { documents } from "./data/graphMock";
 import { retrieveDocuments } from "./gremlin/gremlinRetriever";
 import { GhDefinition } from "./Types";
@@ -10,7 +12,6 @@ import { GhDefinition } from "./Types";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "react-widgets/styles.css";
 import "./App.css";
-import { NetworkView } from "./component/Network";
 import "./Fonts.css";
 
 const graph = await retrieveDocuments();
