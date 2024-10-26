@@ -1,45 +1,45 @@
 #root {
-  margin: 0 auto;
-  width: 100vw;
-  /*color*/
-  --primary-dark: #888;
-  /*border*/
-  --primary-border: 2px solid ##888;
-  --primary-border-radius: 2rem;
-  /*font-size*/
-  --primary-title-lg: 2rem;
-  --primary-title-md: 1.65rem;
-  --primary-title: 1.55rem;
-  --primary-subtitle-lg: 1.45rem;
-  --primary-subtitle-md: 1.35rem;
-  --primary-subtitle: 1.25rem;
-  --primary-txt-lg: 1.15rem;
-  --primary-txt-md: 1rem;
-  --primary-txt: 0.95rem;
-  --primary-subtxt: 0.85rem;
-  --primary-desc: 0.75rem;
-  --primary-chart: 0.65rem;
+    margin: 0 auto;
+    width: 100vw;
+    /*color*/
+    --primary-dark: #888;
+    /*border*/
+    --primary-border: 2px solid ##888;
+    --primary-border-radius: 2rem;
+    /*font-size*/
+    --primary-title-lg: 2rem;
+    --primary-title-md: 1.65rem;
+    --primary-title: 1.55rem;
+    --primary-subtitle-lg: 1.45rem;
+    --primary-subtitle-md: 1.35rem;
+    --primary-subtitle: 1.25rem;
+    --primary-txt-lg: 1.15rem;
+    --primary-txt-md: 1rem;
+    --primary-txt: 0.95rem;
+    --primary-subtxt: 0.85rem;
+    --primary-desc: 0.75rem;
+    --primary-chart: 0.65rem;
 }
 
 /*#region font*/
 .centered {
-  text-align: center;
+    text-align: center;
 }
 
 .title {
-  font-size: var(--primary-title-lg);
-  text-align: center;
+    font-size: var(--primary-title-lg);
+    text-align: center;
 }
 
 .subtitle {
-  font-size: var(--primary-subtitle);
+    font-size: var(--primary-subtitle);
 }
 
 .desc {
-  font-size: var(--primary-txt);
-  color: color(--primary-dark);
-  padding-left: 5rem;
-  padding-right: 5rem;
+    font-size: var(--primary-txt);
+    color: color(--primary-dark);
+    padding-left: 5rem;
+    padding-right: 5rem;
 }
 
 .primary-txt-lg {
@@ -47,22 +47,21 @@
 }
 
 .primary-txt {
-  font-size: var(--primary-txt);
-  color: color(--primary-dark);
+    font-size: var(--primary-txt);
+    color: color(--primary-dark);
 }
 /*#endregion */
 
 hr {
-  border: none;
-  height: 2px;
-  color: var(--primary-dark);
+    border: none;
+    height: 2px;
+    color: var(--primary-dark);
 }
-
 
 /*#region tooltip*/
 .scene-tooltip {
-    background-color: rgba(255,255,255, 0.1) !important;
-    color: white !important;
+    background-color: rgba(255, 255, 255, 0.1) !important;
+    color: lightslategray !important;
     /*padding: 15px !important;*/
     /*border-radius: 2px !important;*/
     font-size: 14px !important;
