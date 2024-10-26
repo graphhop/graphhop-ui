@@ -15,6 +15,7 @@ export interface ComponentLink {
 export const RED = "#FF0000";
 export const GREEN = "#00FF00";
 export const GRAY = "#808080";
+export const YELLOW = "#FFFF00";
 
 // this method should return a hex color for the link based on whether any of their nodes were added or removed
 // if the link touches any deleted nodes, it should be red
