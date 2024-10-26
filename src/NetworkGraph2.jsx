@@ -45,21 +45,23 @@ const NetworkGraph2 = ({ nodes, links, is3D }) => {
             group.add(sprite);
         }
 
-        node.link = `https://grasshopperdocs.com/components/grasshopperparams/${formatNodeName(node.name)}.html`;
+        node.link = `https://grasshopperdocs.com/components/grasshopperparams/${formatNodeName(
+            node.name
+        )}.html`;
 
         return group;
     }, []);
 
     const formatNodeName = (name) => {
         return name
-            .split(' ')
+            .split(" ")
             .map((word, index) => {
                 if (index === 0) {
                     return word.charAt(0).toLowerCase() + word.slice(1);
                 }
                 return word.charAt(0).toUpperCase() + word.slice(1);
             })
-            .join('');
+            .join("");
     };
 
     const getNodeLabel = (node) => `
@@ -80,12 +82,12 @@ const NetworkGraph2 = ({ nodes, links, is3D }) => {
 
     const handleNodeClick = useCallback((node) => {
         if (node.link) {
-            window.open(node.link, '_blank');
+            window.open(node.link, "_blank");
         }
     }, []);
 
     return (
-        <div style={{ height: "100vh" }}>
+        <div style={{ height: "100vh", borderRadius: "5px", border: "1px solid lightgray" }}>
             {is3D ? (
                 <ForceGraph3D
                     graphData={graphData}
@@ -98,7 +100,7 @@ const NetworkGraph2 = ({ nodes, links, is3D }) => {
                     nodeOpacity={0.5}
                     linkLabel={(link) => `Value: ${link.value}`}
                     linkColor={(link) => getLinkColor(link.source, link.target)}
-                    backgroundColor="rgba(0,0,0,0.2)"
+                    backgroundColor="rgba(0,0,0,0)"
                     width={width}
                     onNodeHover={handleNodeHover}
                     onNodeClick={handleNodeClick}
