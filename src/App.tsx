@@ -7,10 +7,14 @@ import NetworkGraph2 from "./NetworkGraph2";
 import ProjectDescription from "./component/ProjectDescription";
 import ProjectTeam from "./component/ProjectTeam";
 import { links, nodes } from "./data/graphMock";
+import { retrieveGraph } from "./gremlin/gremlinRetriever";
+
+const graph = await retrieveGraph();
+console.log("graph", graph);
 
 function App() {
     return (
-        <>
+        <div>
             <Navbar expand="lg" className="bg-body-tertiary">
                 <Container>
                     <Col sm={6}>
@@ -54,7 +58,7 @@ function App() {
             <section id="project-team" style={{ paddingTop: "3rem" }}>
                 <ProjectTeam />
             </section>
-        </>
+        </div>
     );
 }
 
