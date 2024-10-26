@@ -16,7 +16,7 @@ const nodes = [
     added: false,
     deleted: false,
     changed: false,
-    image: "",
+    image: "https://grasshopperdocs.com/images/logo-icon.png",
   },
   {
     id: idB,
