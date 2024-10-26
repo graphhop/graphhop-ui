@@ -1,34 +1,35 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-import NetworkGraph from './NetworkGraph';
+import { Guid } from "guid-typescript";
+import "./App.css";
+import NetworkGraph from "./NetworkGraph";
+import { ComponentNode, Link } from "./Types";
+
+const idA = Guid.create().toString();
+const idB = Guid.create().toString();
+const idC = Guid.create().toString();
+const idD = Guid.create().toString();
 
 const nodes = [
-    { id: 'A' },
-    { id: 'B' },
-    { id: 'C' },
-    { id: 'D' }
-];
+  { id: idA, Name: "A" },
+  { id: idB, Name: "B" },
+  { id: idC, Name: "C" },
+  { id: idD, Name: "D" },
+] as ComponentNode[];
 
 const links = [
-    { source: 'A', target: 'B', value: 1 },
-    { source: 'A', target: 'C', value: 1 },
-    { source: 'B', target: 'D', value: 1 },
-    { source: 'C', target: 'D', value: 20 }
-];
-
+  { source: idA, target: idB, value: 1 },
+  { source: idA, target: idC, value: 1 },
+  { source: idB, target: idD, value: 1 },
+  { source: idC, target: idD, value: 20 },
+] as Link[];
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
-          <h1>Graph Hopper</h1>
-          <NetworkGraph nodes={nodes} links={links} />
-          <h4>Graph Hopper is a plugin</h4>
+      <h1>Graph Hopper</h1>
+      <NetworkGraph nodes={nodes} links={links} />
+      <h4>Graph Hopper is a plugin</h4>
     </>
-  )
+  );
 }
 
-export default App
+export default App;

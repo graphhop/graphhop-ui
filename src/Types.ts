@@ -1,14 +1,12 @@
-import { Guid } from "guid-typescript";
-
 export interface ComponentNode {
-  UniqueId: Guid;
+  id: string;
   Name: string;
   Added: boolean;
   Deleted: boolean;
 }
 
 export interface Link {
-  Source: Guid;
-  Target: Guid;
-  Thickness: number;
+  source: string;
+  target: string;
+  value: number;
 }
