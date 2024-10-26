@@ -1,8 +1,8 @@
-import { ComponentNode, Link } from "./Types";
+import { ComponentLink, ComponentNode } from "./Types";
 
 interface NetworkGraph2Props {
   nodes: ComponentNode[];
-  links: Link[];
+  links: ComponentLink[];
   is3D: boolean;
 }
 

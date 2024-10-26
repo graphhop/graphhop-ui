@@ -2,7 +2,7 @@ import { Guid } from "guid-typescript";
 import "./App.css";
 import NetworkGraph from "./NetworkGraph";
 import NetworkGraph2 from "./NetworkGraph2";
-import { ComponentNode, Link } from "./Types";
+import { ComponentLink, ComponentNode } from "./Types";
 
 const idA = Guid.create().toString();
 const idB = Guid.create().toString();
@@ -21,7 +21,7 @@ const links = [
   { source: idA, target: idC, value: 1 },
   { source: idB, target: idD, value: 1 },
   { source: idC, target: idD, value: 20 },
-] as Link[];
+] as ComponentLink[];
 
 function App() {
   return (

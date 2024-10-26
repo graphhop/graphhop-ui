@@ -1,8 +1,8 @@
-import { ComponentNode, Link } from "./Types";
+import { ComponentLink, ComponentNode } from "./Types";
 
 declare function NetworkGraph(props: {
   nodes: ComponentNode[];
-  links: Link[];
+  links: ComponentLink[];
 }): JSX.Element;
 
 export default NetworkGraph;
