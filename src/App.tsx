@@ -7,6 +7,7 @@ import { ComponentNode, Link } from "./Types";
 import * as React from 'react';
 import { Container, Row, Col, Navbar, Nav } from 'react-bootstrap';
 import "bootstrap/dist/css/bootstrap.min.css";
+import { ComponentLink, ComponentNode } from "./Types";
 
 const idA = Guid.create().toString();
 const idB = Guid.create().toString();
@@ -14,18 +15,46 @@ const idC = Guid.create().toString();
 const idD = Guid.create().toString();
 
 const nodes = [
-    { id: idA, name: "A", added: false, deleted: false, changed: false },
-    { id: idB, name: "B", added: true, deleted: false, changed: false },
-    { id: idC, name: "C", added: false, deleted: true, changed: false },
-    { id: idD, name: "D", added: false, deleted: false, changed: true },
+  {
+    id: idA,
+    name: "Line",
+    added: false,
+    deleted: false,
+    changed: false,
+    image: "https://grasshopperdocs.com/images/logo-icon.png",
+  },
+  {
+    id: idB,
+    name: "Point3D",
+    added: true,
+    deleted: false,
+    changed: false,
+    image: "",
+  },
+  {
+    id: idC,
+    name: "Point3D",
+    added: false,
+    deleted: true,
+    changed: false,
+    image: "",
+  },
+  {
+    id: idD,
+    name: "Point3D",
+    added: false,
+    deleted: false,
+    changed: true,
+    image: "",
+  },
 ] as ComponentNode[];
 
 const links = [
-    { source: idA, target: idB, value: 1 },
-    { source: idA, target: idC, value: 1 },
-    { source: idB, target: idD, value: 1 },
-    { source: idC, target: idD, value: 20 },
-] as Link[];
+  { source: idA, target: idB, value: 1 },
+  { source: idA, target: idC, value: 1 },
+  { source: idB, target: idD, value: 1 },
+  { source: idC, target: idD, value: 20 },
+] as ComponentLink[];
 
 function App() {
     return (
