@@ -23,13 +23,13 @@ function App() {
         <div>
             <Navbar expand="lg" className="bg-body-tertiary">
                 <Container>
-                    <Col sm={6}>
+                    <Col>
                         <Navbar.Brand className="nova-mono-regular" href="#home">
                             GraphHopper
                         </Navbar.Brand>
                         <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     </Col>
-                    <Col sm={6}>
+                    <Col>
                         <Navbar.Collapse id="basic-navbar-nav">
                             <Nav className="me-auto">
                                 <Nav.Link

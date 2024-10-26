@@ -6,7 +6,7 @@ const ProjectTeam = () => {
     return (
         <Container>
             <Row>
-                <Col sm={6}>
+                <Col>
                     <hr />
                     <h4 className="subtitle nova-mono-regular">Project Team</h4>
                     <h4 className="primary-txt ibm-plex-sans-light">
@@ -22,6 +22,7 @@ const ProjectTeam = () => {
                         Peter Zhang <br />
                     </h4>
                 </Col>
+                <Col></Col>
             </Row>
         </Container>
     );
