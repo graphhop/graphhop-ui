@@ -21,7 +21,9 @@ const NetworkGraph2 = ({ nodes, links, is3D }) => {
           : node.changed
           ? YELLOW
           : GRAY,
-        opacity: 0.2,
+        opacity: 0.6,
+        transparent: true,
+        depthWrite: false, // Disable depth writing
       })
     );
     group.add(sphere);
@@ -34,6 +36,7 @@ const NetworkGraph2 = ({ nodes, links, is3D }) => {
       const sprite = new THREE.Sprite(spriteMaterial);
       sprite.scale.set(10, 10, 1);
       sprite.position.set(0, 0, 5); // Adjust this to change icon position relative to sphere
+      sprite.renderOrder = 1; // Ensure sprite renders on top
       group.add(sprite);
     }
 
