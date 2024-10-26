@@ -3,7 +3,6 @@ import "./App.css";
 import "./Fonts.css";
 import NetworkGraph from "./NetworkGraph";
 import NetworkGraph2 from "./NetworkGraph2";
-import { ComponentNode, Link } from "./Types";
 import * as React from 'react';
 import { Container, Row, Col, Navbar, Nav } from 'react-bootstrap';
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -61,13 +60,14 @@ function App() {
         <>
             <Navbar expand="lg" className="bg-body-tertiary">
                 <Container>
-                    <Navbar.Brand className="nova-mono-regular" href="#home">Graph Hopper</Navbar.Brand>
+                    <Navbar.Brand className="nova-mono-regular" href="#home">GraphHopper</Navbar.Brand>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
+
                     <Navbar.Collapse id="basic-navbar-nav">
-                        <Nav className="ibm-plex-sans-light" className="me-auto">
-                            <Nav.Link href="#project-description">Project Description</Nav.Link>
-                            <Nav.Link href="#network-graph">Network Graph</Nav.Link>
-                            <Nav.Link href="#project-team">Project Team</Nav.Link>
+                        <Nav className="me-auto">
+                            <Nav.Link className="ibm-plex-sans-light" href="#project-description">Project Description</Nav.Link>
+                            <Nav.Link className="ibm-plex-sans-light" href="#network-graph">Network Graph</Nav.Link>
+                            <Nav.Link className="ibm-plex-sans-light" href="#project-team">Project Team</Nav.Link>
                         </Nav>
                     </Navbar.Collapse>
                 </Container>
