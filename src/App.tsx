@@ -25,7 +25,7 @@ function App() {
                 <Container>
                     <Col>
                         <Navbar.Brand className="nova-mono-regular" href="#home">
-                            GraphHopper
+                            GraphHop
                         </Navbar.Brand>
                         <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     </Col>
