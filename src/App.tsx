@@ -1,6 +1,5 @@
 import { Guid } from "guid-typescript";
 import "./App.css";
-import NetworkGraph from "./NetworkGraph";
 import NetworkGraph2 from "./NetworkGraph2";
 import { ComponentLink, ComponentNode } from "./Types";
 
@@ -55,7 +54,6 @@ function App() {
   return (
     <>
       <h1>Graph Hopper</h1>
-      <NetworkGraph nodes={nodes} links={links} />
       <NetworkGraph2 nodes={nodes} links={links} is3D={true} />
       <h4>Graph Hopper is a plugin</h4>
     </>
