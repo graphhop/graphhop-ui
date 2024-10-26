@@ -32,7 +32,16 @@ const NetworkGraph = ({ nodes, links }) => {
       .enter().append('circle')
       .attr('r', 5)
       .attr('fill', '#69b3a2')
-      .call(drag(simulation));
+      .call(drag(simulation))
+    .on('mouseover', (event, d) => {
+        tooltip.style('opacity', 1)
+            .html(`ID: ${d.id}`)
+            .style('left', `${event.pageX + 5}px`)
+            .style('top', `${event.pageY + 5}px`);
+    })
+    .on('mouseout', () => {
+        tooltip.style('opacity', 0);
+    });
 
     node.append('title')
       .text(d => d.id);
