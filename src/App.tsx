@@ -7,7 +7,6 @@ import ProjectTeam from "./component/ProjectTeam";
 import { NetworkView } from "./component/NetworkView";
 import { documents } from "./data/graphMock";
 import { retrieveDocuments } from "./gremlin/gremlinRetriever";
-import { GhDefinition } from "./Types";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 import "react-widgets/styles.css";
@@ -18,7 +17,7 @@ const graph = await retrieveDocuments();
 console.log("graph", graph);
 
 function App() {
-    const [definition, setDefinition] = useState<GhDefinition>(documents[0]);
+    const [selectedDefinition, setSelectedDefinition] = useState<number>(0);
 
     return (
         <div>
@@ -58,7 +57,7 @@ function App() {
 
             {/* Section 2 */}
             <section id="network-graph" style={{ paddingTop: "3rem" }}>
-                <NetworkView definitions={documents} definitionIndex={0} />
+                <NetworkView definitions={documents} definitionIndex={selectedDefinition} />
             </section>
 
             {/* Section 3 */}
