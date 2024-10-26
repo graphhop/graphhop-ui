@@ -1,6 +1,6 @@
-import "../Fonts.css";
-import { Container, Row, Col, Navbar, Nav } from 'react-bootstrap';
 import "bootstrap/dist/css/bootstrap.min.css";
+import { Col, Container, Row } from "react-bootstrap";
+import "../Fonts.css";
 
 const ProjectTeam = () => {
     return (
@@ -25,7 +25,7 @@ const ProjectTeam = () => {
                 </Col>
             </Row>
         </Container>
-    )
-}
+    );
+};
 
 export default ProjectTeam;
