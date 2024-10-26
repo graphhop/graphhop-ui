@@ -8,6 +8,9 @@ import { Container, Row, Col, Navbar, Nav } from 'react-bootstrap';
 import "bootstrap/dist/css/bootstrap.min.css";
 import { ComponentLink, ComponentNode } from "./Types";
 
+import ProjectDescription from "./component/ProjectDescription";
+import ProjectTeam from "./component/ProjectTeam";
+
 const idA = Guid.create().toString();
 const idB = Guid.create().toString();
 const idC = Guid.create().toString();
@@ -60,9 +63,11 @@ function App() {
         <>
             <Navbar expand="lg" className="bg-body-tertiary">
                 <Container>
+                <Col sm={6}>
                     <Navbar.Brand className="nova-mono-regular" href="#home">GraphHopper</Navbar.Brand>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
-
+                </Col>
+                <Col sm={6}>
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="me-auto">
                             <Nav.Link className="ibm-plex-sans-light" href="#project-description">Project Description</Nav.Link>
@@ -70,32 +75,13 @@ function App() {
                             <Nav.Link className="ibm-plex-sans-light" href="#project-team">Project Team</Nav.Link>
                         </Nav>
                     </Navbar.Collapse>
+                </Col>
                 </Container>
             </Navbar>
 
             {/* Section 1 */}
             <section id="project-description" style={{ paddingTop: "3rem" }}>
-                <Container>
-                    <Row>
-                        <Col sm={6}></Col>
-                        <Col sm={6}>
-                            <hr />
-                            <h4 className="subtitle nova-mono-regular">Description</h4>
-                            <h4 className="primary-txt ibm-plex-sans-light">
-                                "Graph Hopper" is a version control tool specifically designed
-                                for Grasshopper, enabling streamlined management of design iterations
-                                and collaborative workflows. By integrating version tracking into Grasshopper,
-                                Graph Hopper allows users to efficiently save, review, and revert to previous
-                                versions of their visual scripts, improving organization and reducing the risk
-                                of losing valuable work. It offers features for annotating changes, comparing
-                                different versions visually, and seamlessly synchronizing updates across teams.
-                                Graph Hopper empowers designers, architects, and engineers to collaborate
-                                effectively within Grasshopper, enhancing the creative process through improved
-                                project tracking and collaboration.
-                            </h4>
-                        </Col>
-                    </Row>
-                </Container>
+                <ProjectDescription/>
             </section>
 
             {/* Section 2 */}
@@ -106,27 +92,7 @@ function App() {
 
             {/* Section 3 */}
             <section id="project-team" style={{ paddingTop: "3rem" }}>
-                <Container>
-                    <Row>
-                        <Col sm={6}></Col>
-                        <Col sm={6}>
-                            <hr />
-                            <h4 className="subtitle nova-mono-regular">Project Team</h4>
-                            <h4 className="primary-txt ibm-plex-sans-light">
-                                Alexander Schiftner <br />
-                                Alexis Kotzambasis <br />
-                                Colin Matthews <br />
-                                Cullen Sarles <br />
-                                Justin Jao <br />
-                                K Chiu <br />
-                                Karen Kuo <br />
-                                Konrad Zaremba <br />
-                                Nicholas Martino <br />
-                                Peter Zhang <br />
-                            </h4>
-                        </Col>
-                    </Row>
-                </Container>
+                <ProjectTeam />
             </section>
         </>
     );
