@@ -1,5 +1,5 @@
 import { Guid } from "guid-typescript";
-import { ComponentLink, ComponentNode } from "../Types";
+import { ComponentLink, ComponentNode, GhDefinition } from "../Types";
 
 const idA = Guid.create().toString();
 const idB = Guid.create().toString();
@@ -43,9 +43,11 @@ export const nodes = [
   },
 ] as ComponentNode[];
 
-export const links = [
-  { source: idA, target: idB, value: 1 },
-  { source: idA, target: idC, value: 1 },
-  { source: idB, target: idD, value: 1 },
-  { source: idC, target: idD, value: 20 },
+const links = [
+    { source: idA, target: idB, value: 1 },
+    { source: idA, target: idC, value: 1 },
+    { source: idB, target: idD, value: 1 },
+    { source: idC, target: idD, value: 20 },
 ] as ComponentLink[];
+
+export const documents = [{ version: "1.0", nodes, links }] as GhDefinition[];
