@@ -1,5 +1,4 @@
-export interface Document {
-    id: string;
+export interface GhDefinition {
     version: string;
     nodes: ComponentNode[];
     links: ComponentLink[];

@@ -4,15 +4,19 @@ import "./App.css";
 import "./Fonts.css";
 import NetworkGraph2 from "./NetworkGraph2";
 
+import { useState } from "react";
 import ProjectDescription from "./component/ProjectDescription";
 import ProjectTeam from "./component/ProjectTeam";
-import { links, nodes } from "./data/graphMock";
-import { retrieveGraph } from "./gremlin/gremlinRetriever";
+import { documents } from "./data/graphMock";
+import { retrieveDocuments } from "./gremlin/gremlinRetriever";
+import { GhDefinition } from "./Types";
 
-const graph = await retrieveGraph();
+const graph = await retrieveDocuments();
 console.log("graph", graph);
 
 function App() {
+    const [definition, setDefinition] = useState<GhDefinition>(documents[0]);
+
     return (
         <div>
             <Navbar expand="lg" className="bg-body-tertiary">
@@ -51,7 +55,7 @@ function App() {
 
             {/* Section 2 */}
             <section id="network-graph" style={{ paddingTop: "3rem" }}>
-                <NetworkGraph2 nodes={nodes} links={links} is3D={true} />
+                <NetworkGraph2 nodes={definition.nodes} links={definition.links} is3D={true} />
             </section>
 
             {/* Section 3 */}
