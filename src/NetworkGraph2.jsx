@@ -6,12 +6,19 @@ import * as THREE from "three";
 import "./App.css";
 
 const NetworkGraph2 = ({ nodes, links, is3D }) => {
+    const HEIGHT_RATIO = 0.5;
+    const WIDTH_RATIO = 0.66;
+
     const [tooltipContent, setTooltipContent] = useState(null);
     const [tooltipPosition, setTooltipPosition] = useState({ x: 0, y: 0 });
-    const [width, setWidth] = useState(window.outerWidth * 0.66);
+    const [height, setHeight] = useState(window.outerHeight * HEIGHT_RATIO);
+    const [width, setWidth] = useState(window.outerWidth * WIDTH_RATIO);
 
     useEffect(() => {
-        const handleResize = () => setWidth(window.innerWidth * 0.66);
+        const handleResize = () => {
+            setWidth(window.innerWidth * WIDTH_RATIO);
+            setHeight(window.innerHeight * HEIGHT_RATIO);
+        };
         window.addEventListener("resize", handleResize);
         return () => window.removeEventListener("resize", handleResize);
     }, []);
@@ -87,7 +94,7 @@ const NetworkGraph2 = ({ nodes, links, is3D }) => {
     }, []);
 
     return (
-        <div style={{ height: "100vh", borderRadius: "5px", border: "1px solid lightgray" }}>
+        <div style={{ height: `${height}px`, borderRadius: "5px", border: "1px solid lightgray" }}>
             {is3D ? (
                 <ForceGraph3D
                     graphData={graphData}
@@ -102,6 +109,7 @@ const NetworkGraph2 = ({ nodes, links, is3D }) => {
                     linkColor={(link) => getLinkColor(link.source, link.target)}
                     backgroundColor="rgba(0,0,0,0)"
                     width={width}
+                    height={height}
                     onNodeHover={handleNodeHover}
                     onNodeClick={handleNodeClick}
                 />
