@@ -1,8 +1,8 @@
 #root {
+
     width: 100vw;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 
     --primary-dark: #888;
     /*border*/
@@ -40,8 +40,8 @@
 .desc {
     font-size: var(--primary-txt);
     color: color(--primary-dark);
-    padding-left: 5rem;
-    padding-right: 5rem;
+/*    padding-left: 5rem;
+    padding-right: 5rem;*/
 }
 
 .primary-txt-lg {
@@ -87,3 +87,7 @@ hr {
 
 }
 
+@media (min-width: 500px) {
+    .container, .container-lg, .container-md, .container-sm {
+    }
+}

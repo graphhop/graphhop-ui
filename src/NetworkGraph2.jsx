@@ -97,7 +97,7 @@ const NetworkGraph2 = ({ nodes, links, is3D }) => {
         <div
             style={{
                 height: `${height}px`,
-                width: `${width}px`,
+                width: "100%",
                 borderRadius: "5px",
                 border: "1px solid lightgray",
             }}

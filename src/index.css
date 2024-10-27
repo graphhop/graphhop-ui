@@ -68,7 +68,7 @@ button:focus-visible {
 }
 
 .container {
-    min-width: 80vw !important;
+/*    min-width: 80vw !important;
     margin-left: 10vw !important;
-    margin-right: 10vw !important;
+    margin-right: 10vw !important;*/
 }
