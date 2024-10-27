@@ -14,7 +14,6 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "react-widgets/styles.css";
 import "./App.css";
 import "./Fonts.css";
-import { GhDefinition } from "./Types";
 
 const vertices = await retrieveVertices();
 console.log("vertices", vertices);
@@ -61,29 +60,11 @@ const describeGrasshopperFile = async (jsonContent: any) => {
     }
 };
 
-// change a few hard coded nodes added, deleted and change prop
-const fakeDiff = (document: GhDefinition) => {
-    
-}
-
 function App() {
     // index of the selected version in the definitions array
-    const [selectedVersion1, setSelectedVersion1] = useState<number>(0);
-    const [selectedVersion2, setSelectedVersion2] = useState<number>(0);
-
     const [description, setDescription] = useState<string>("");
-
-    // const documents = mapDefinitions(vertices, edges);
-
     const [documents, setDocuments] = useState(mapDefinitions(vertices, edges));
     console.log("documents", documents);
-
-    const changeDefinition = (document: GhDefinition) => {
-        if (selectedVersion1 === selectedVersion2) {
-            setDocuments([document]);
-        }
-        setDocuments(fakeDiff(document))
-    };
 
     const handleDescribeFile = async () => {
         const description = await describeGrasshopperFile(documents);
@@ -102,8 +83,8 @@ function App() {
             <section id="network-graph" style={{ paddingTop: "3rem" }}>
                 <NetworkView
                     definitions={documents}
-                    definitionIndex={selectedVersion1}
-                    changeDefinition={changeDefinition}
+                    definitionIndex={0}
+                    setDocuments={setDocuments}
                 />
             </section>
 

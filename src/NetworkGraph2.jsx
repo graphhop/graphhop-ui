@@ -7,7 +7,7 @@ import "./App.css";
 
 const NetworkGraph2 = ({ nodes, links, is3D }) => {
     const HEIGHT_RATIO = 0.5;
-    const WIDTH_RATIO = 0.8;
+    const WIDTH_RATIO = 0.7;
 
     const [tooltipContent, setTooltipContent] = useState(null);
     const [tooltipPosition, setTooltipPosition] = useState({ x: 0, y: 0 });
