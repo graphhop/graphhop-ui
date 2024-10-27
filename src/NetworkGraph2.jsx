@@ -7,7 +7,7 @@ import "./App.css";
 
 const NetworkGraph2 = ({ nodes, links, is3D }) => {
     const HEIGHT_RATIO = 0.5;
-    const WIDTH_RATIO = 0.66;
+    const WIDTH_RATIO = 0.75;
 
     const [tooltipContent, setTooltipContent] = useState(null);
     const [tooltipPosition, setTooltipPosition] = useState({ x: 0, y: 0 });
@@ -94,7 +94,14 @@ const NetworkGraph2 = ({ nodes, links, is3D }) => {
     }, []);
 
     return (
-        <div style={{ height: `${height}px`, borderRadius: "5px", border: "1px solid lightgray" }}>
+        <div
+            style={{
+                height: `${height}px`,
+                width: `${width}px`,
+                borderRadius: "5px",
+                border: "1px solid lightgray",
+            }}
+        >
             {is3D ? (
                 <ForceGraph3D
                     graphData={graphData}
