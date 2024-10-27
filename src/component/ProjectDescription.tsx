@@ -8,7 +8,7 @@ const ProjectDescription = () => {
             <Row>
                 <Col>
                     <img
-                        src="../../public/logo.png"
+                        src="/logo.png"
                         alt="GraphHop Logo"
                         className="img-fluid"
                         style={{
