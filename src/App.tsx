@@ -17,7 +17,8 @@ const graph = await retrieveDocuments();
 console.log("graph", graph);
 
 function App() {
-    const [selectedDefinition, setSelectedDefinition] = useState<number>(0);
+    // index of the selected version in the definitions array
+    const [selectedVersion, setSelectedVersion] = useState<number>(0);
 
     return (
         <div>
@@ -29,7 +30,7 @@ function App() {
 
             {/* Section 2 */}
             <section id="network-graph" style={{ paddingTop: "3rem" }}>
-                <NetworkView definitions={documents} definitionIndex={selectedDefinition} />
+                <NetworkView definitions={documents} definitionIndex={selectedVersion} />
             </section>
 
             {/* Section 3 */}
