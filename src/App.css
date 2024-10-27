@@ -1,7 +1,9 @@
 #root {
-    margin: 0 auto;
     width: 100vw;
-    /*color*/
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
     --primary-dark: #888;
     /*border*/
     --primary-border: 2px solid ##888;
@@ -74,3 +76,14 @@ hr {
     word-wrap: break-word;
 }
 /*#endregion */
+
+
+.button {
+    background-color: white;
+    border: none;
+    color: var(--primary-dark);
+    font-size: var(--primary-subtitle);
+    padding: 0px;
+
+}
+

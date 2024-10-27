@@ -12,8 +12,10 @@
   "dependencies": {
     "@types/d3": "^7.4.3",
     "@types/gremlin": "^3.6.7",
+    "axios": "^1.7.7",
     "bootstrap": "^5.3.3",
     "d3": "^7.9.0",
+    "dotenv": "^16.4.5",
     "gremlin": "^3.7.2",
     "guid-typescript": "^1.0.9",
     "react": "^18.3.1",
