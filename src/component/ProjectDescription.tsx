@@ -6,7 +6,20 @@ const ProjectDescription = () => {
     return (
         <Container>
             <Row>
-                <Col></Col>
+                <Col>
+                    <img
+                        src="../../public/logo.png"
+                        alt="GraphHop Logo"
+                        className="img-fluid"
+                        style={{
+                            marginTop: "1rem",
+                            maxWidth: "100%",
+                            maxHeight: "200px",
+                            flex: "1",
+                            alignItems: "center",
+                        }}
+                    />
+                </Col>
                 <Col>
                     <hr />
                     <h4 className="subtitle nova-mono-regular">Description</h4>
