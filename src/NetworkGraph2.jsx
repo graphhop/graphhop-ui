@@ -35,20 +35,23 @@ const NetworkGraph2 = ({ nodes, links, is3D }) => {
                 color: node.added ? GREEN : node.deleted ? RED : node.changed ? YELLOW : GRAY,
                 opacity: 0.6,
                 transparent: true,
-                depthWrite: false, // Disable depth writing
+                depthWrite: false,
             })
         );
         group.add(sphere);
 
-        // Create icon sprite
+        // Create icon sprite if the node has an image
         if (node.image) {
             const spriteMaterial = new THREE.SpriteMaterial({
-                map: new THREE.TextureLoader().load(node.image),
+                map: new THREE.TextureLoader().load(`data:image/png;base64,${node.image}`),
             });
             const sprite = new THREE.Sprite(spriteMaterial);
-            sprite.scale.set(10, 10, 1);
-            sprite.position.set(0, 0, 5); // Adjust this to change icon position relative to sphere
-            sprite.renderOrder = 1; // Ensure sprite renders on top
+
+            // Adjust sprite scale and position
+            sprite.scale.set(10, 10, 1); // Adjust scale as needed
+            sprite.position.set(0, 0, 5); // Position relative to the main object
+            sprite.renderOrder = 1; // Ensure sprite renders on top of other objects
+
             group.add(sprite);
         }
 

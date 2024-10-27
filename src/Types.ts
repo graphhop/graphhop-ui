@@ -7,6 +7,7 @@ export interface GhDefinition {
 export interface ComponentNode {
     id: string;
     name: string;
+    description: string;
     added: boolean;
     deleted: boolean;
     changed: boolean;

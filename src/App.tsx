@@ -8,16 +8,23 @@ import ProjectDescription from "./component/ProjectDescription";
 import ProjectTeam from "./component/ProjectTeam";
 
 import { NetworkView } from "./component/NetworkView";
-import { documents } from "./data/graphMock";
-import { retrieveDocuments } from "./gremlin/gremlinRetriever";
+// import { documents } from "./data/graphMock";
+import { mapDefinitions } from "./gremlin/gremlinConverter";
+import { retrieveEdges, retrieveVertices } from "./gremlin/gremlinRetriever";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 import "react-widgets/styles.css";
 import "./App.css";
 import "./Fonts.css";
 
-const graph = await retrieveDocuments();
-console.log("graph", graph);
+const vertices = await retrieveVertices();
+console.log("vertices", vertices);
+
+const edges = await retrieveEdges();
+console.log("edges", edges);
+
+const documents = mapDefinitions(vertices, edges);
+console.log("documents", documents);
 
 const openaiApiKey = process.env.REACT_APP_OPENAI_API_KEY;
 
