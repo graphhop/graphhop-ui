@@ -12,10 +12,26 @@ type NetworkViewProps = {
 export const NetworkView = (props: NetworkViewProps) => {
     const { definitions, definitionIndex, changeDefinition } = props;
     const definition = definitions[definitionIndex];
+
     return (
         <Container>
-            <div style={{ width: "300px", paddingBottom: "10px" }}>
-                <div>Select a version</div>
+            <div className="ibm-plex-sans-regular">Select versions to compare:</div>
+            <div
+                style={{
+                    width: "300px",
+                    paddingTop: "5px",
+                    paddingBottom: "10px",
+                    display: "flex",
+                    gap: "0.5rem",
+                    justifyContent: "center",
+                }}
+            >
+                <DropdownList
+                    data={definitions}
+                    value={definition}
+                    textField="version"
+                    onChange={changeDefinition}
+                />
                 <DropdownList
                     data={definitions}
                     value={definition}
