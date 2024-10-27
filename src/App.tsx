@@ -3,6 +3,7 @@ import { Col, Container, Nav, Navbar } from "react-bootstrap";
 
 import ProjectDescription from "./component/ProjectDescription";
 import ProjectTeam from "./component/ProjectTeam";
+import NavBar from "./component/NavBar"
 
 import { NetworkView } from "./component/NetworkView";
 import { documents } from "./data/graphMock";
@@ -21,35 +22,7 @@ function App() {
 
     return (
         <div>
-            <Navbar expand="lg" className="bg-body-tertiary">
-                <Container>
-                    <Col>
-                        <Navbar.Brand className="nova-mono-regular" href="#home">
-                            GraphHop
-                        </Navbar.Brand>
-                        <Navbar.Toggle aria-controls="basic-navbar-nav" />
-                    </Col>
-                    <Col>
-                        <Navbar.Collapse id="basic-navbar-nav">
-                            <Nav className="me-auto">
-                                <Nav.Link
-                                    className="ibm-plex-sans-light"
-                                    href="#project-description"
-                                >
-                                    Project Description
-                                </Nav.Link>
-                                <Nav.Link className="ibm-plex-sans-light" href="#network-graph">
-                                    Network Graph
-                                </Nav.Link>
-                                <Nav.Link className="ibm-plex-sans-light" href="#project-team">
-                                    Project Team
-                                </Nav.Link>
-                            </Nav>
-                        </Navbar.Collapse>
-                    </Col>
-                </Container>
-            </Navbar>
-
+            <NavBar />
             {/* Section 1 */}
             <section id="project-description" style={{ paddingTop: "3rem" }}>
                 <ProjectDescription />
