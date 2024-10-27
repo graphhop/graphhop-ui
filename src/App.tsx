@@ -1,9 +1,8 @@
 import { useState } from "react";
-import { Col, Container, Nav, Navbar } from "react-bootstrap";
 
+import NavBar from "./component/NavBar";
 import ProjectDescription from "./component/ProjectDescription";
 import ProjectTeam from "./component/ProjectTeam";
-import NavBar from "./component/NavBar"
 
 import { NetworkView } from "./component/NetworkView";
 import { documents } from "./data/graphMock";
